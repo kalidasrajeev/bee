@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       height: '40px'
   },
   customizeAppbar: {
-    background: '#FFFF64',
+    background: 'red',
     color: 'black'
   },
   customizeSearch: {

@@ -16,3 +16,9 @@ body
   color: gray;
 }
 
+.footerLinks
+{
+  list-style-type: none;
+  padding: 10px;
+}
+

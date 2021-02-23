@@ -12,6 +12,8 @@ import certi from './cert.png';
 import ship from './ship.png';
 import support from './support.png';
 import guaran from './guaran.png';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import Example from './carousel';
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+    },
+    appBar: {
+        top: 'auto',
+        bottom: 0,
+        background: 'black',
+        marginTop: '80px'
     },
     custImage: {
 
@@ -59,7 +67,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
         cursor: 'pointer',
         MarginRight: '10px'
-    }
+    },
+
 
 }));
 
@@ -137,7 +146,7 @@ export default function AutoGrid() {
                                 <Grid item xs={4}>
                                     <Paper className={classes.paper} variant='outlined' square><img src={support} />
 
-                                        <div style={{ fontSize: '12px', fontWeight: '600', color: 'black',marginTop: '13px' }}>Excellent Support</div>
+                                        <div style={{ fontSize: '12px', fontWeight: '600', color: 'black', marginTop: '13px' }}>Excellent Support</div>
                                         <div style={{ fontSize: '11px', fontWeight: '500' }}>
                                             Get support from our agents
                                         </div></Paper>
@@ -194,7 +203,7 @@ export default function AutoGrid() {
                 </Grid>
                 <Grid item xs={2}>
                     <Grid container>
-                    <Grid item xs={12}><div style={{marginTop: '30px'}}><input type='submit' value='SHOP WITH AN EXPERT' className={classes.cartBtn}></input></div></Grid>
+                        <Grid item xs={12}><div style={{ marginTop: '30px' }}><input type='submit' value='SHOP WITH AN EXPERT' className={classes.cartBtn}></input></div></Grid>
                     </Grid>
                 </Grid>
             </Grid>
@@ -214,11 +223,11 @@ export default function AutoGrid() {
 
             <Grid container>
 
-                <Grid item xs={10} style={{ marginTop: '30px' }}>
+                <Grid item xs={10}>
                     <Grid container>
                         <Grid item xs={1}></Grid>
                         <Grid item xs={11}>
-                           <Example/>
+                            <div style={{ marginTop: '100px' }}><Example /></div>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -226,7 +235,7 @@ export default function AutoGrid() {
 
             </Grid><Grid container>
 
-                <Grid item xs={10} style={{ marginTop: '30px' }}>
+                <Grid item xs={10} style={{ marginTop: '100px' }}>
                     <Grid container>
                         <Grid item xs={1}></Grid>
                         <Grid item xs={11}><Paper variant='outlined' square><div style={{ fontWeight: '600' }}>&nbsp;You might also like<span style={{ float: 'right' }}>View All&nbsp;</span></div></Paper></Grid>
@@ -286,8 +295,60 @@ export default function AutoGrid() {
                     </Grid>
                 </Grid>
             </Grid>
-            
-            <Grid container style={{background: 'black',color: 'white', marginTop: '20px'}}>
+            <AppBar position="static" className={classes.appBar}>
+                <Toolbar className={classes.customizeToolbar}>
+                    <div className={classes.root}>
+                        <Grid conainer spacing={2}>
+                            <Grid item xs={1}></Grid>
+                            <Grid item xs={2}>
+                                <ul>
+                                    <li className='footerLinks'>Our Guide</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid item xs={2}>
+                                <ul>
+                                    <li className='footerLinks'>Categories</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid item xs={2}>
+                                <ul>
+                                    <li className='footerLinks'>Our Services</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid item xs={2}>
+                                <ul>
+                                    <li className='footerLinks'>Follow Us</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid item xs={2}>
+                                <ul>
+                                    <li className='footerLinks'>Our Guide</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                    <li className='footerLinks'>Links</li>
+                                </ul>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Toolbar>
+            </AppBar>
+            {/* <Grid container style={{background: 'black',color: 'white', marginTop: '20px'}}>
             <Grid item xs={1}></Grid>
                 <Grid item xs={2} style={{marginTop: '20px'}}>
                     <Grid container spacing={2}>
@@ -334,8 +395,8 @@ export default function AutoGrid() {
                         <Grid item xs={12}>Link</Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-            
+            </Grid> */}
+
         </div>
     );
 }
